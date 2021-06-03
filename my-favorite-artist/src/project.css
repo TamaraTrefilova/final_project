@@ -1,0 +1,157 @@
+body {
+  font-size: 13px;
+  line-height: 1.23077;
+  color: var(--labelPrimary);
+  font-style: normal;
+  background: linear-gradient(to right, #e1e0ff, #d7fadd);
+}
+
+#submit,
+#last {
+  background: linear-gradient(to right, #e1e0ff, #d7fadd);
+  color: var(--labelPrimary);
+}
+
+.invalid {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+.valid {
+  border: 1px solid forestgreen;
+}
+
+.hide {
+  visibility: hidden;
+  display: none;
+  color: red;
+}
+
+.doNotShow {
+  visibility: hidden;
+  display: none;
+}
+
+.doNotShowA {
+  visibility: hidden;
+  display: none;
+}
+
+.doNotShowB {
+  visibility: hidden;
+  display: none;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  background: linear-gradient(to right, #e1e0ff, #d7fadd);
+}
+
+.modal-fullscreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+
+li {
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+
+.modal-text {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+ul {
+  /* padding-top: 5px; */
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+
+label {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+
+p {
+  padding-bottom: 15px;
+}
+
+p:last-of-type {
+  padding-bottom: 0;
+}
+
+img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-block-end: 5px;
+}
+
+.flex-container-home {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerChild {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  font-size: 15px;
+  /* padding: 10px 60px; */
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+  width: 10%;
+}
