@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Link} from 'react-router-dom';
-import { withRouter } from "react-router";
-import './project.css';
+// import React, { Component } from 'react';
+// import { Link} from 'react-router-dom';
+// import { withRouter } from "react-router";
+// import './project.css';
 
-class Artist extends Component {
+// class Artist extends Component {
 
 
     // state = {
@@ -54,7 +54,7 @@ class Artist extends Component {
     //         });
     // }
 
-    render() {
+    // render() {
         // const { isLoading, error, artist } = this.state;
 
         // const styleObj = {
@@ -63,8 +63,8 @@ class Artist extends Component {
         //     textAlign: "center",
         //     paddingTop: "100px",
         // }
-        return (
-            <div className="artist-list">
+        // return (
+        //     <div className="artist-list">
                 {/* {isLoading && <p>Loading...</p>}
                 {error && <p>{error}</p>}
 
@@ -77,10 +77,10 @@ class Artist extends Component {
                         </div>
                     )
                 })} */}
-            </div>
+            {/* </div>
         )
     }
 
 }
 
-export default withRouter(Artist)
+export default withRouter(Artist) */}
