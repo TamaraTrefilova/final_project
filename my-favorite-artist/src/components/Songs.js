@@ -29,7 +29,6 @@ class Songs extends Component {
             if(this.props.size !==""){
                 itemsSize = parseInt(this.props.size);
               url = `https://itunes.apple.com/search?term=${artistName}&media=music&entity=${choiceValue}&limit=${itemsSize}.`;
-              console.log("url", url);
             } else {
                 url = `https://itunes.apple.com/search?term=${artistName}&media=music&entity=${choiceValue}`;
             }
@@ -37,7 +36,6 @@ class Songs extends Component {
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("data", data.results);
                     this.setState({
                         fetchResults: data.results,
                         isLoading: false,
@@ -78,7 +76,7 @@ class Songs extends Component {
                                 <h3>Track: {result['trackName']}</h3>
                                 <div>
                                     <img className='image'
-                                    src={result['artworkUrl60']}
+                                    src={result['artworkUrl100']}
                                     alt='artis-image'>
                                     </img>
                                 </div>

@@ -50,7 +50,7 @@ ul {
   font-size: 25px;
 }
 
-label {
+label, h3{
   padding-top: 15px;
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -83,17 +83,32 @@ img {
 }
 
 .container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 50px;
 }
 
-.containerChild {
+.containerChild1 {
   display: flex;
   flex-direction: column;
-  order: 5; 
+  flex-basis: 90%;
+  flex: 1;
+  margin-left: 100px;
+}
+
+.containerChild2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin-left: 300px;
+}
+
+.column {
+  
+  height: 100px;
 }
 
 .button {
@@ -101,16 +116,16 @@ img {
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
-  width: 15%;
+  width: 50%;
   display: center;
   padding: 10px;
-  margin-left: 100px;
   background: linear-gradient(to right, #e1e0ff, #d7fadd);
   color: var(--labelPrimary);
+  margin-left: 60px;
 }
 
-.form-control, .inputField{
-  max-width: 35%;
+.form-control{
+  max-width: 75%;
   height: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -118,9 +133,14 @@ img {
 
 
 .inputField{
-    max-width: 33%;
+    max-width: 72%;
     height: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
   }
   
+
+  .some-page-wrapper {
+    margin: 15px;
+
+  }

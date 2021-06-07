@@ -53,8 +53,7 @@ class HomePage extends Component {
 
           onSubmit = (e) => {
             e.preventDefault();
-            const { inputValue, optionValue, itemsValue, isItemsSelected} = this.state;
-            console.log (inputValue, optionValue, itemsValue, isItemsSelected);   
+            const { inputValue, optionValue} = this.state;   
             if(inputValue ==="" || optionValue===""){
                 window.alert('Please, enter search criteria!');
                 this.setState({
@@ -80,12 +79,12 @@ class HomePage extends Component {
 
     render() {
         return (
-
+            <div className='some-page-wrapper'>
             <div className="container">
               <div>
                 <h1>Find your favorite Artist</h1>
 
-                    <form className="containerChild">
+                    <form className="containerChild1">
                         <label >
                             Artist's name:
                         </label>
@@ -133,8 +132,9 @@ class HomePage extends Component {
                     </form>
                 </div>
                 
-                <div>
-                { this.state.isSubmitted && <div>
+                <div  className="containerChild2">
+                    <div className='column'> 
+                    { this.state.isSubmitted && <div>
                     { this.state.optionValue==='musicTrack' && 
                      <div>              
                         <Songs
@@ -178,9 +178,13 @@ class HomePage extends Component {
 
 
                     </div>}
+                    
+                     </div>
+              
                         
                </div>
             </div>
+        </div>
         )
     }
 }

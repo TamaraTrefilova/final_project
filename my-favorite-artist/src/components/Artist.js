@@ -22,22 +22,15 @@ class Artist extends Component {
     componentDidMount() {
         let artistName = "";
         let choiceValue = "";
-        let itemsSize = "";
         let url = "";
             artistName = this.props.artist;
             choiceValue = this.props.choice;
-            if(this.props.size !==""){
-                itemsSize = parseInt(this.props.size);
-              url = `https://itunes.apple.com/search?term=${artistName}&media=music&entity=${choiceValue}&limit=${itemsSize}.`;
-              console.log("url", url);
-            } else {
-                url = `https://itunes.apple.com/search?term=${artistName}&media=music&entity=${choiceValue}`;
-            }
+           
+            url = `https://itunes.apple.com/search?term=${artistName}&media=music&entity=${choiceValue}`;
 
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    console.log("data", data.results);
                     this.setState({
                         fetchResults: data.results,
                         isLoading: false,
