@@ -6,49 +6,25 @@ body {
   background: linear-gradient(to right, #e1e0ff, #d7fadd);
 }
 
-#submit,
-#last {
-  background: linear-gradient(to right, #e1e0ff, #d7fadd);
-  color: var(--labelPrimary);
-}
-
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  background: linear-gradient(to right, #e1e0ff, #d7fadd);
-}
-
-.modal-fullscreen {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  top: 0;
-  left: 0;
-}
-
 h1 {
   padding-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 25px;
+  font-size: 40px;
+  background: -webkit-linear-gradient(rgb(36, 127, 163), rgb(90, 191, 231));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+h3 {
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 15px;
+  background: -webkit-linear-gradient(rgb(40, 20, 94), rgb(90, 191, 231));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 li {
@@ -80,6 +56,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
+  color:rgb(40, 20, 94);
 }
 
 p {
@@ -128,6 +105,8 @@ img {
   display: center;
   padding: 10px;
   margin-left: 100px;
+  background: linear-gradient(to right, #e1e0ff, #d7fadd);
+  color: var(--labelPrimary);
 }
 
 .form-control, .inputField{

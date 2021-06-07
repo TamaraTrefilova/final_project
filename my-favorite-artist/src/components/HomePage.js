@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import ArtistComponent from './ArtistComponent';
-// import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Songs from './Songs';
+import Artist from './Artist';
+import Album from './Album';
+import Video from './Video';
 import './project.css';
 
 class HomePage extends Component {
@@ -54,7 +56,7 @@ class HomePage extends Component {
             const { inputValue, optionValue, itemsValue, isItemsSelected} = this.state;
             console.log (inputValue, optionValue, itemsValue, isItemsSelected);   
             if(inputValue ==="" || optionValue===""){
-                window.alert('You need to enter something!');
+                window.alert('Please, enter search criteria!');
                 this.setState({
                     isSubmitted: false
                 });
@@ -132,16 +134,51 @@ class HomePage extends Component {
                 </div>
                 
                 <div>
-                    { this.state.isSubmitted && 
+                { this.state.isSubmitted && <div>
+                    { this.state.optionValue==='musicTrack' && 
                      <div>              
-                        <ArtistComponent
+                        <Songs
                             artist ={this.state.inputValue}
                             choice = {this.state.optionValue}
                             size={this.state.itemsValue} 
-                            />
+                        />
+                    
+                    </div>
+                    }      
+                     { this.state.optionValue==='musicArtist' && 
+                     <div>              
+                        <Artist
+                            artist ={this.state.inputValue}
+                            choice = {this.state.optionValue}
+                            size={this.state.itemsValue} 
+                        />
+                    
+                    </div>
+                    }      
+                    { this.state.optionValue==='album' && 
+                     <div>              
+                        <Album
+                            artist ={this.state.inputValue}
+                            choice = {this.state.optionValue}
+                            size={this.state.itemsValue} 
+                        />
+                    
+                    </div>
+                    }      
+                    { this.state.optionValue==='musicVideo' && 
+                     <div>              
+                        <Video
+                            artist ={this.state.inputValue}
+                            choice = {this.state.optionValue}
+                            size={this.state.itemsValue} 
+                        />
                     
                     </div>
                     }          
+
+
+                    </div>}
+                        
                </div>
             </div>
         )
