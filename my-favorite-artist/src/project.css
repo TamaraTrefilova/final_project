@@ -12,35 +12,6 @@ body {
   color: var(--labelPrimary);
 }
 
-.invalid {
-  border: 2px solid red;
-  border-radius: 5px;
-}
-
-.valid {
-  border: 1px solid forestgreen;
-}
-
-.hide {
-  visibility: hidden;
-  display: none;
-  color: red;
-}
-
-.doNotShow {
-  visibility: hidden;
-  display: none;
-}
-
-.doNotShowA {
-  visibility: hidden;
-  display: none;
-}
-
-.doNotShowB {
-  visibility: hidden;
-  display: none;
-}
 
 .modal {
   display: none; /* Hidden by default */
@@ -145,13 +116,32 @@ img {
 .containerChild {
   display: flex;
   flex-direction: column;
+  order: 5; 
 }
 
 .button {
   font-size: 15px;
-  /* padding: 10px 60px; */
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
-  width: 10%;
+  width: 15%;
+  display: center;
+  padding: 10px;
+  margin-left: 100px;
 }
+
+.form-control, .inputField{
+  max-width: 35%;
+  height: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.inputField{
+    max-width: 33%;
+    height: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
