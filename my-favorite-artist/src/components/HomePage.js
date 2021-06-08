@@ -33,7 +33,12 @@ class HomePage extends Component {
             optionValue: inputVal,
             isSubmitted: false
         });
-        if(inputVal!=='musicArtist'){
+        if(inputVal==='musicArtist'){
+            this.setState({
+                isItemsSelected: false,
+                isSubmitted: false
+            });
+        } else{
             this.setState({
                 isItemsSelected: true,
                 isSubmitted: false

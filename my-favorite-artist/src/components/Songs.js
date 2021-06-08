@@ -62,8 +62,8 @@ class Songs extends Component {
       
 
         return (
-            <div>
-            <div className="items">
+            <div >
+
                     {isLoading && <p>Loading...</p>}
                     {error && <h3>{error}</h3>}
                     <h1>{this.state.name}</h1>
@@ -71,20 +71,22 @@ class Songs extends Component {
                         let odrer = idx+1;         
                         return (
 
-                            <div className="songs" key={idx} >
-                                <h3>Number# {odrer}</h3>
-                                <h3>Track: {result['trackName']}</h3>
-                                <div>
+                            <div className="container1" key={idx}>
+                              <div className='description'>
+                                    <h3>Number# {odrer}</h3>
+                                    <h3>Track: {result['trackName']}</h3>
+                                    <div>
                                     <img className='image'
                                     src={result['artworkUrl100']}
                                     alt='artis-image'>
                                     </img>
-                                </div>
-                                 <ul> <a style={styleObj} href={result['trackViewUrl']} target="_blank" rel = "noopener noreferrer">Click to hear the track </a> </ul>                      
+                                    <ul> <a style={styleObj} href={result['trackViewUrl']} target="_blank" rel = "noopener noreferrer">Click to hear the track </a> </ul>                     
+                              </div>                       
                             </div>
+                                
+                        </div>
                         )
                     })}
-                </div>
 
             </div>
         );

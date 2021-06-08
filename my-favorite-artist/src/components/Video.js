@@ -63,8 +63,8 @@ class Video extends Component {
       
 
         return (
+           
             <div>
-            <div className="items">
                     {isLoading && <p>Loading...</p>}
                     {error && <h3>{error}</h3>}
                     <h1>{this.state.name}</h1>
@@ -72,22 +72,25 @@ class Video extends Component {
                         let odrer = idx+1;         
                         return (
 
-                            <div className="songs" key={idx} >
-                                <h3>Number# {odrer}</h3>
-                                <h3>Video: {result['trackName']}</h3>
-                                <div>
-                                    <img className='image'
-                                    src={result['artworkUrl100']}
-                                    alt='artis-image'>
-                                    </img>
-                                </div>
-                                 <ul> <a style={styleObj} href={result['trackViewUrl']} target="_blank" rel = "noopener noreferrer">Click to watch the video </a> </ul>                      
-                            </div>
+                            <div className="container1" key={idx}>
+                            <div className='description'>
+                               <h3>Number# {odrer}</h3>
+                               <h3>Video: {result['trackName']}</h3>
+                                  <div>
+                                  <img className='image'
+                                  src={result['artworkUrl100']}
+                                  alt='artis-image'>
+                                  </img>
+                                <ul> <a style={styleObj} href={result['trackViewUrl']} target="_blank" rel = "noopener noreferrer">Click to watch the video </a> </ul>                    
+                            </div>                       
+                          </div>
+                              
+                      </div>
                         )
                     })}
                 </div>
 
-            </div>
+           
         );
     }
 

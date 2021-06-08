@@ -63,8 +63,8 @@ class Album extends Component {
       
 
         return (
+            <div className="flex-container-child">
             <div>
-            <div className="items">
                     {isLoading && <p>Loading...</p>}
                     {error && <h3>{error}</h3>}
                     <h1>{this.state.name}</h1>
@@ -72,19 +72,22 @@ class Album extends Component {
                         let odrer = idx+1;         
                         return (
 
-                            <div className="songs" key={idx} >
+                            <div className="container1" key={idx}>
+                            <div className='description'>
                                 <h3>Number# {odrer}</h3>
                                 <h3>Album: {result['collectionName']}</h3>
                                 <h3>Track count: {result['trackCount']}</h3>
-                                <div>
-                                    <img className='image'
-                                    src={result['artworkUrl100']}
-                                    alt='artis-image'>
-                                    </img>
-                                </div>
-                                 <ul> <a style={styleObj} href={result['collectionViewUrl']} target="_blank" rel = "noopener noreferrer">Click to review the Album </a> </ul>                      
-                                 
-                            </div>
+                                  <div>
+                                  <img className='image'
+                                  src={result['artworkUrl100']}
+                                  alt='artis-image'>
+                                  </img>
+                                  <ul> <a style={styleObj} href={result['collectionViewUrl']} target="_blank" rel = "noopener noreferrer">Click to review the Album </a> </ul>                      
+                            </div>                       
+                          </div>
+                              
+                      </div>
+                  
                         )
                     })}
                 </div>

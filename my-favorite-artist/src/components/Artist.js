@@ -59,7 +59,7 @@ class Artist extends Component {
       
 
         return (
-            <div>
+            <div className="flex-container-child">
             <div className="item">
                     {isLoading && <p>Loading...</p>}
                     {error && <h3>{error}</h3>}
